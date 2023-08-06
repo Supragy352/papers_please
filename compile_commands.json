@@ -1,0 +1,24 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-I.",
+      "-I../src",
+      "-I../src/external",
+      "-I/usr/local/include",
+      "-Wall",
+      "-std=c99",
+      "-D_DEFAULT_SOURCE",
+      "-Wno-missing-braces",
+      "-Wunused-result",
+      "-O2",
+      "-o",
+      "raylib_examples",
+      "main.c"
+    ],
+    "directory": "/home/callisto/Dev/C/papers_please",
+    "file": "/home/callisto/Dev/C/papers_please/main.c",
+    "output": "/home/callisto/Dev/C/papers_please/raylib_examples"
+  }
+]

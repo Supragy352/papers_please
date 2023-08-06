@@ -1,0 +1,28 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+	],
+	"build_systems": [
+		{
+			"name": "Make - Release",
+			"target": "terminus_exec",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"cmd": ["make", "PROJECT_NAME=\"${file_base_name}\""]
+		},
+		{
+			"name": "Make - Debug",
+			"target": "terminus_exec",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"cmd": ["make", "PROJECT_NAME=\"${file_base_name}\"", "BUILD_MODE=DEBUG"]
+		},
+		{
+			"name": "Clean",
+			"target": "terminus_exec",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"cmd": ["make", "clean"]
+		}
+	],
+}
