@@ -120,12 +120,12 @@ all: $(PROJECT_NAME)
 
 # Compile project
 $(PROJECT_NAME):
-	$(CC) -o $(PROJECT_NAME) main.c $(INCLUDE_PATHS) $(CFLAGS) $(LDFLAGS) $(LDLIBS)
+	$(CC) -o $(PROJECT_NAME) $(FILE).c $(INCLUDE_PATHS) $(CFLAGS) $(LDFLAGS) $(LDLIBS)
 
 run: $(PROJECT_NAME)
 
 $(PROJECT_NAME):
-	$(CC) -o $(PROJECT_NAME) main.c $(INCLUDE_PATHS) $(CFLAGS) $(LDFLAGS) $(LDLIBS) && ./$(PROJECT_NAME)
+	$(CC) -o $(PROJECT_NAME) $(FILE) $(INCLUDE_PATHS) $(CFLAGS) $(LDFLAGS) $(LDLIBS) && ./$(PROJECT_NAME)
 
 # Clean project
 clean:
