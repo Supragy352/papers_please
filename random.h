@@ -4,8 +4,6 @@
 #include <raylib.h>
 #include <stdlib.h>
 
-#include "logger.h"
-
 #define  COLOR_COUNT 8
 
 Color colors[] = {
@@ -21,16 +19,16 @@ Color colors[] = {
 
 
 int RandomRange(int min, int max) {
-    /* int val = */
-    return min + (rand() % (max - min + 1));
-    // printf("%d\n", val);
-    // return val;
+    int val = min + (rand() % (max - min + 1));
+    return val;
 }
 
-Vector2 RandomVector(int minW, int maxW, int minH, int maxH) {
+Vector2 RandomVector(int minX, int maxX, int minY, int maxY) {
     return (Vector2) {
-        RandomRange(minW, maxW),
-        RandomRange(minH, maxH)
+        RandomRange(minX, maxX),
+        // Returns a Random vector with 
+        // X = Random between minX and maxX
+        RandomRange(minY, maxY)
     };
 }
 
